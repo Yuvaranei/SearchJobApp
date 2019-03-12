@@ -1,0 +1,135 @@
+
+.fa-star{
+    color: orange;
+    margin-right: 5px;
+}
+
+.fa-sort,.fa-sort-up,.fa-sort-down{
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.job-search-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+}
+
+.total-jobs{
+    font-size: 30px;
+    text-align: center;
+}
+
+.labels{
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.experience-list,.location-search-box,.keyword-skill-search-box,button{
+    height: 40px;
+}
+
+.experience-list{
+    width: 120px;
+    font-size: 20px;
+}
+
+.search-title,.joblist-title{
+    padding: 20px 0;
+    background-color: dimgray;
+    text-align: center;
+    color: white;
+}
+
+.no-jobs-found{
+    font-size: 30px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.sort-section{
+    text-align: right;
+}
+
+.sort-by-location,.sort-by-experience{
+    margin: 10px;
+}
+
+.theme-button{
+    font-size: 20px;
+    height: 40px;
+    color: white;
+    background-color: dimgray;
+    border: 1px solid dimgray;
+}
+
+.job{
+    &-container{
+        padding: 20px;
+    }
+
+    &-items{
+        padding: 30px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &-item{
+        border: 1px solid;
+        width: 100%;
+        border-radius: 5px;
+        margin: 5px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.search-container{
+    text-align: center;
+    margin: 20px 0;
+
+    button{
+        height: 40px;
+        width: 15%;
+        font-size: 20px;
+        height: 40px;
+        color: white;
+        background-color: dimgray;
+        border: 1px solid dimgray;
+    }
+}
+
+@include breakpoint(small){
+    .search-container{
+        flex-direction: column;
+        .search-box{
+            width: 100%;
+        }
+        button{
+            width: 100%;
+        }
+    }
+    .fa-sort,.fa-sort-up,.fa-sort-down{
+        text-align: center;
+    }
+}
+
+
+@include breakpoint(medium){
+    .job-item{
+        width: 45%;
+    }
+
+    .search-container{
+        flex-direction: row;
+    }
+}
+
+@include breakpoint(large){
+    .job-item{
+        width: 30%;
+    }
+}
